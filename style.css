@@ -736,7 +736,7 @@ button:hover {
 /*----------------------- Our Team Page --------------------------*/
 
 .our_team_back{
-    position: fixed;
+    position: absolute;
 }
 
 .our_team_back img{
