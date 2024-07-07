@@ -349,15 +349,16 @@
     position: absolute; 
     top: 90px; 
     left: 64px; 
-    font-size: 16px; 
+    font-size: 16px;
+    font-family: "Encode Sans", sans-serif;
     font-weight: 500; 
-    line-height: 1.7;
+    line-height: 1.8;
     color: #171A1FFF;
 }
 
 .learn_more{
     position: absolute;
-    top: 245px; 
+    top: 250px; 
     left: 70px; 
 }
 
@@ -366,7 +367,6 @@
 #mission_main{
     font-size: 140px;
     text-align: center;
-    color: rgb(4, 41, 70);
     margin: 0;
     font-family: "Anton SC", sans-serif;
     font-weight: 400;
@@ -428,9 +428,9 @@
 
 .quote_container img{
     position: absolute;
-    width: 175px;
+    width: 250px;
     left: 60px;
-    top: 35px;
+    bottom: 0px;
 }
 
 .quote_para{
