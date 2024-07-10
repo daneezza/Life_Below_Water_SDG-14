@@ -155,7 +155,7 @@
 .splash {
     margin: 0;
     overflow: hidden;
-    position: fixed;
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -164,12 +164,9 @@
     width: 100%;
     height: 100vh;
     text-align: center;
-    opacity: 1;
-    visibility: visible;
-    animation: fadeOut 1s 3s forwards;
 }
 
-.splash-screen {
+.splash_screen {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -194,13 +191,18 @@
 }
 
 .loader {
-    border: 8px solid #f3f3f3; /* Light grey */
-    border-top: 8px solid #3498db; /* Blue */
+    border: 8px solid #f3f3f3; 
+    border-top: 8px solid #3498db; 
     border-radius: 50%;
     width: 60px;
     height: 60px;
     animation: spin 2s linear infinite;
     margin: 0 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 #splash_welcome {
@@ -234,38 +236,9 @@
     color: #070707; 
 }
 
-.homepage {
-    opacity: 0; 
-    animation: fadeIn 2s forwards; 
-    animation-delay: 3s; 
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-        visibility: visible;
-    }
-}
-
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 
 /*-------------------------------- Home Page --------------------------------*/
@@ -349,7 +322,7 @@
     position: absolute; 
     top: 90px; 
     left: 64px; 
-    font-size: 16px;
+    font-size: 16px; 
     font-family: "Encode Sans", sans-serif;
     font-weight: 500; 
     line-height: 1.8;
@@ -362,6 +335,7 @@
     left: 70px; 
 }
 
+/*-------------- Where the Learn More Directed -----*/
 /*-------------- Vision and Mission - ( Goal Explained ) ----------*/
 
 #mission_main{
@@ -401,6 +375,7 @@
     font-size: 40px;
     font-family: "Vollkorn", sans-serif;
 }
+
 /* Quote Container */
 .quote_back{
     position: absolute;
@@ -539,7 +514,7 @@
     left: 590px;
     width: 400px;  
     height: 478px; 
-    background: #FFFFFF80; /* white */
+    background: #FFFFFF80;
     border-radius: 50px;
 }
 
@@ -549,7 +524,7 @@
     right: 80px;
     width: 400px;    
     height: 478px; 
-    background: #FFFFFF80; /* white */
+    background: #FFFFFF80; 
     border-radius: 50px;
 }
 
@@ -625,7 +600,7 @@
     display: block;
 }
 
-h2 {
+#feed_title {
     margin-top: 0;
     margin-left: 150px;
     margin-bottom: 30px;
@@ -713,10 +688,6 @@ button:hover {
     background-color: #5a6268;
 }
 
-#star {
-    color: rgb(179, 3, 3);
-}
-
 .preview-section p, .success-section p {
     margin: 10px 0;
     font-size: 16px;
@@ -742,7 +713,7 @@ button:hover {
     height: 900px;
 }
 
-.team_title{
+.team_title p{
     position: absolute;
     display: flex;
     justify-content: center;
@@ -845,7 +816,7 @@ button:hover {
     width: 100%;
 }
 
-.con_title{
+.con_title p{
     position: absolute;
     width:100%;
     top: 120px;
@@ -914,4 +885,96 @@ button:hover {
 .ref a{
     color: #4fb5f9;
     font-family: "Encode Sans", sans-serif;
+}
+
+/* -------------- Page Editor Styles ---------------*/
+
+.pageEditor{
+    background: linear-gradient(45deg, #48a8f7, #031e40);
+    height:1200px;
+    display: flex;
+}
+
+.pageEditor header {
+    position: absolute;
+    width: 40%;
+    left: 30%;
+    top:120px;
+    padding:20px 30px 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    gap: 30px;
+    font-family: "Encode Sans", sans-serif;
+    font-size: 26px;
+    font-weight: 550;
+    line-height: 1.8;
+    background-color: rgba(109, 178, 235, 0.687);
+    border-radius: 20px;
+}
+
+.pageEditor header img{
+    width: 200px;
+    border-radius: 30px;
+}
+
+.tasks_container {
+    padding:40px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 450px;
+    width:80%;
+    left: 10%;
+    line-height: 1.8;
+    background-color: rgba(109, 178, 235, 0.687);
+    border-radius: 20px;
+}
+
+.tasks_container ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center; text-align: center;
+}
+
+.tasks_container h2 {
+    font-family: "Vollkorn";
+    background-color: #01042f;
+    color: white;
+    text-align: center;
+    padding: 5px 20px 5px 20px;
+    border-radius:20px;
+    margin-bottom: 20px;
+}
+
+.tasks_container h3, p, a{
+    font-family: "Encode Sans", sans-serif;
+}
+
+.tasks_container a{
+    color: white;
+    border-style: solid;
+    background-color: #17a7f0;
+}
+
+.editor_buttons {
+    position: relative; 
+    margin-bottom: 25px;
+    padding: 0 20px; 
+    font-family: "Encode Sans", sans-serif; 
+    font-size: 18px; 
+    line-height: 28px; 
+    font-weight: 400; 
+    color: #FFFFFF; /* White */
+    background: #17a7f0; /* Background color */
+    border: none; 
+    border-radius: 22px; 
+    cursor: pointer;
+    z-index: 3;
+}
+
+.editor_buttons:hover {
+    background: #01042f;
+    transform: scale(1.05);
 }
