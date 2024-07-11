@@ -891,7 +891,7 @@ button:hover {
 
 .pageEditor{
     background: linear-gradient(45deg, #48a8f7, #031e40);
-    height:1200px;
+    height:1500px;
     display: flex;
 }
 
@@ -924,6 +924,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: "Encode Sans", sans-serif;
     top: 450px;
     width:80%;
     left: 10%;
@@ -932,10 +933,11 @@ button:hover {
     border-radius: 20px;
 }
 
-.tasks_container ul {
+.tasks {
     display: flex;
     flex-direction: column;
-    align-items: center; text-align: center;
+    text-align: center;
+    list-style-type: none;
 }
 
 .tasks_container h2 {
@@ -948,8 +950,8 @@ button:hover {
     margin-bottom: 20px;
 }
 
-.tasks_container h3, p, a{
-    font-family: "Encode Sans", sans-serif;
+.task p{
+    margin-top: 20px;
 }
 
 .tasks_container a{
@@ -960,6 +962,7 @@ button:hover {
 
 .editor_buttons {
     position: relative; 
+    margin-top: 25px;
     margin-bottom: 25px;
     padding: 0 20px; 
     font-family: "Encode Sans", sans-serif; 
