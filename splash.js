@@ -4,5 +4,5 @@ setTimeout(function() {
     splashScreen.classList.add('fade-out');
     setTimeout(function() {
         window.location.href = 'home.html';
-    }, 300);
-}, 3700);
+    }, 500);
+}, 3500);
