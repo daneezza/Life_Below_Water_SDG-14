@@ -18,4 +18,4 @@ We are a team of students in University of Westminster(IIT Sri Lanka) learning e
 
 ## Google Drive Resources
 
-For additional reports please visit our [Web_Reports_Group 08 ](https://drive.google.com/drive/folders/1ehh7PZOG1lVrIhL8wIONuEAp7S8zdaCt?usp=drive_link)).
+For additional reports please visit our [Web_Reports_Group 08](https://drive.google.com/drive/folders/1ehh7PZOG1lVrIhL8wIONuEAp7S8zdaCt?usp=drive_link).
